@@ -12,72 +12,13 @@ body {
     justify-content: space-evenly;
     height: 7rem;
 }
-.menu {
-    width: 60px;
-    height: 60px;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-    box-shadow:0 0 0 0 black, 0 0 0 0 black;
-    transition: 0.19s  ease-in-out;
-}
-.menu:hover {
-    box-shadow: 0 0 0 10px black, 0 0 0 10px black;
-
-}
-
-.hamburguer {
-    display: block;
-    background-color: white;
-    width: 30px;
-    height: 2px;
-    position: relative;
-    top: 20px;
-    left: 12px;
-    transition: .3s ease-in-out;
-}
-.hamburguer:before,
-.hamburguer:after {
-    background-color: white;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transition: .5s ease-in-out;
-}
-.hamburguer:before {
-    top: 10px;
-}
-.hamburguer:after{
-    bottom: -20px;
-}
-input{
-    display: none;
-}
-input:checked ~ label .menu {
-    box-shadow: 0 0 0 100vw black, 0 0 0 100vh black;
-}
-input:checked ~ label .hamburguer {
-    transform: rotate(45deg);
-    top: 30px;
-    left: 13px;
-}
-input:checked ~ label .hamburguer:before {
-    transform: rotate(90deg);
-    top: 0px;
-    left: 0px;
-}
-input:checked ~ label .hamburguer:after {
-    transform: rotate(90deg);
-    top: 0px;
-    left: 0px;
-}
-input:checked ~ label .nav-ul-responsive {
-    opacity: 1;
-    visibility: visible;
+@media (max-width:375px) {
+    .box-navbar {
+       height: 2rem;
+       width: 100%;
+       position: fixed;
+       background-color: white;
+    }
 }
 .nav-logo {
     width: 50%;
@@ -85,6 +26,13 @@ input:checked ~ label .nav-ul-responsive {
     align-items: center;  
     font-weight: bolder;  
     font-size: 250%;
+}
+@media (max-width:375px) {
+    .nav-logo {
+        font-size: 150%;
+        display: flex;
+        justify-content: center;
+    }
 }
 a {
     color: white;
@@ -113,6 +61,11 @@ a {
     justify-content: space-evenly;
     align-items: center;
 }
+@media (max-width:375px) {
+    .nav-ul {
+        display: none;
+    }
+}
 .li {
     font-size: 130%;
     opacity: 0.5;
@@ -131,8 +84,21 @@ a {
     justify-content: center;
     padding-left: 10%;
     margin-bottom: 4%;
-    z-index: -4;
 }
+@media (max-width:375px) {
+    .box-blueorange {
+        background-image: url(images/laranja\ azul\ recorte.png);
+        background-position: 170vw top;
+        min-height: 100%;
+        font-size: 10px;
+        height: 670px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 40px;
+    }
+}
+
 .title {
     font-weight: 800;
     font-size: 450%;
@@ -144,6 +110,11 @@ a {
     opacity: 0.5;
     color: whitesmoke;
 }
+@media (max-width:375px) {
+    .paragraph {
+       font-size: 25px;
+    }
+}
 .main {
     margin-bottom: 5%;
 }
@@ -153,10 +124,79 @@ a {
     justify-content: center;
     align-items: center;
 }
-.images {
+@media (max-width:375px) {
+    .box-images {
+       margin-top: 20%;
+       margin-bottom: 20%;
+    }
+}
+.images1, .images2, .images3, .images4, .images5, .images6, .images7, .images8, .images9, .images10, .images11, .images12 {
     margin: 0.4%;
     width: 20%;
     height: 50%;
+}
+@media (max-width:375px) {
+    .images5 {
+      width: 80%;
+      margin-bottom: 10%;
+      order: -1;
+    }
+    .images11 {
+            width: 80%;
+            margin-bottom: 10%;
+
+            order: 0;
+    }
+    .images2 {
+        width: 80%;
+        margin-bottom: 10%;
+        order: 1;
+      }
+      .images7 {
+        width: 80%;
+        margin-bottom: 10%;
+        order: 2;
+      }
+      .images12 {
+        width: 80%;
+        margin-bottom: 10%;
+        order: 3;
+      }
+      .images4 {
+        width: 80%;
+        margin-bottom: 10%;
+        order: 4;
+      }
+      .images6 {
+        width: 80%;
+        margin-bottom: 10%;
+        order: 5;
+      }
+      .images3 {
+        width: 80%;
+        margin-bottom: 10%;
+        order: 6;
+      }
+      .images9 {
+        width: 80%;
+        margin-bottom: 10%;
+        order: 7;
+      }
+      .images1 {
+        width: 80%;
+        margin-bottom: 10%;
+        order: 8;
+      }
+      .images8 {
+        width: 80%;
+        margin-bottom: 10%;
+        order: 9;
+      }
+      .images10 {
+        width: 80%;
+        order: 10;
+        margin-bottom: -10%;
+      }
 }
 footer {
     display: flex;
@@ -164,21 +204,58 @@ footer {
     height: 6rem;
     background-color: whitesmoke;
 }
+@media (max-width:375px) {
+    .footer {
+        display: flex;
+        flex-flow: wrap row;
+    }
+}
 .box-icon {
     width: 20%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
+}
+@media (max-width:375px) {
+    .box-icon {
+        width: 80%;
+        height: 60%;
+        background-color: turquoise;
+        margin-bottom: 5%;
+    }
 }
 .box-space {
     width:15%;
+    visibility: hidden;
+}
+@media (max-width:375px) {
+    .box-space {
+        visibility: visible;
+        position: relative;
+        top: 40px;
+        right: 22px;
+    }
+}
+.button {
+    width: 60px;
+    height: 20px;
+    background-color: rgb(27, 27, 27);
+    border: 0;
+    color: gray;
+    opacity: 0.9;
 }
 .box-copyright {
     width: 45%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+@media (max-width:375px) {
+    .box-copyright {
+        display: flex;
+        flex-flow: wrap; 
+        width: 70%;
+    }
 }
 .icon {
     width: 30px;
@@ -190,8 +267,90 @@ footer {
     font-size: 130%;
     font-weight: 800;
 }
+@media (max-width:375px) {
+    .copy-title {
+        font-size: 15px;
+        position: relative;
+        left: -63px;
+    }
+}
 .footer-paragraph {
     font-size: 90%;
     width: 500px;
     opacity: 0.8;
+}
+@media (max-width:375px) {
+    .footer-paragraph {
+        width: 200px;
+        font-size: 13px;
+        white-space: wrap;
+        overflow-y:hidden;
+        text-overflow: ellipsis;
+    }
+}
+/* fazendo o menu hamburguer */
+.menu {
+    width: 110px;
+    height: 32px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    transition: 0.3s  ease-in-out;
+}
+.hamburguer {
+    display: block;
+    background-color: white;
+    width: 25px;
+    height: 2px;
+    position: relative;
+    top: 6px;
+    left: 45px;
+    transition: .3s ease-in-out;
+}
+.hamburguer:before,
+.hamburguer:after {
+    background-color: white;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .5s ease-in-out;
+}
+.hamburguer:before {
+    top: 10px;
+}
+.hamburguer:after{
+    bottom: -20px;
+}
+input{
+    display: none;
+}
+input:checked ~ label .menu {
+    background-color: rgb(27, 103, 245);
+    box-shadow: 0 0 0 100vw rgb(27, 103, 245), 0 0 0 100vh rgb(27, 103, 245);
+}
+input:checked ~ label .hamburguer {
+    transform: rotate(45deg);
+    top: 30px;
+    left: 13px;
+}
+input:checked ~ label .hamburguer:before {
+    transform: rotate(90deg);
+    top: 0px;
+    left: 0px;
+}
+input:checked ~ label .hamburguer:after {
+    transform: rotate(90deg);
+    top: 0px;
+    left: 0px;
+}
+input:checked ~ label .nav-ul-responsive {
+    opacity: 1;
+    visibility: visible;
+}
+input:checked ~ label .paragraph {
+    visibility: hidden;
 }
