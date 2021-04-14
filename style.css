@@ -35,19 +35,21 @@ body {
     }
 }
 a {
-    color: white;
+    color: orange;
     text-decoration: none;
 }
 .nav-link {
     color: black;
+    display: inline-block;
+    width: 25%;
+    padding: auto;
+    margin: 32px 0;
 }
 .nav-ul-responsive {
-    display: block;
-    margin-bottom: 40px;
-    font-size: 47px;
+    font-size: 50px;
     list-style: none;
     position: absolute;
-    top: 50%;
+    top: 200px;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -55,7 +57,7 @@ a {
     transition: .25s ease-in-out;
 }
 .nav-ul {
-    width: 30%;
+    width:30%;
     display: flex;
     list-style: none;
     justify-content: space-evenly;
@@ -71,9 +73,9 @@ a {
     opacity: 0.5;
 }
 .li:hover {
-    font-weight: 800;
-    opacity: 1;
-    font-size: 120%;
+    font-weight: 800 ;
+    opacity:1;
+    
 }
 .box-blueorange {
     background-image: url(images/laranja\ azul\ recorte.png);
@@ -298,6 +300,13 @@ footer {
     left: 0;
     cursor: pointer;
     transition: 0.3s  ease-in-out;
+    display: none;
+}
+@media (max-width:375px) {
+    .menu {
+        display: initial;
+       
+    }
 }
 .hamburguer {
     display: block;
@@ -347,10 +356,14 @@ input:checked ~ label .hamburguer:after {
     top: 0px;
     left: 0px;
 }
-input:checked ~ label .nav-ul-responsive {
-    opacity: 1;
-    visibility: visible;
+@media (max-width:375px){
+    input:checked ~ label .nav-ul-responsive {
+        opacity: 1;
+        visibility: visible;
+    }
 }
-input:checked ~ label .paragraph {
-    visibility: hidden;
+@media (max-width:375px) {
+    input:checked ~ label .paragraph {
+        visibility: hidden;
+    }
 }
